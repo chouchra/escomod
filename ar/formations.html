@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تكويناتنا - إسكومود</title>
+    <meta name="description" content="اكتشف برامج التكوين المهني لدينا في الفصالة، الخياطة وتصميم الأزياء بالجديدة.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .logo { font-family: 'Amiri', serif; }
+
+        .page-header {
+            padding: 120px 0 60px;
+            background-color: var(--color-text);
+            color: var(--color-white);
+            text-align: center;
+        }
+        .page-header h1 {
+            color: var(--color-white);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+        .course-card {
+            background: var(--color-white);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-normal);
+            border-top: 4px solid var(--color-primary);
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .course-content {
+            padding: 2rem;
+        }
+        .course-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        .course-meta {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-grey-dark);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .course-meta i {
+            width: 20px;
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" style="background-color: var(--color-white);">
+        <div class="container">
+            <a href="index.html" class="logo">إسكومود</a>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="formations.html" class="active">تكويناتنا</a>
+                <a href="galerie.html">المعرض</a>
+                <a href="temoignages.html">آراء الطلاب</a>
+                <a href="a-propos.html">من نحن</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="../formations.html" class="lang-switch">Français</a>
+            </div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>برامجنا التكوينية</h1>
+            <p>ابنِ مسيرتك المهنية مع برامجنا المتخصصة والتطبيقية.</p>
+<p>المدرسة تستهدف الطالبات وربات البيوت والنساء العاملات لتفتح للجميع آفاق المستقبل.</p>
+        </div>
+    </header>
+
+    <!-- Courses List -->
+    <section class="container">
+        <div class="courses-grid">
+
+            <!-- Formation 1 -->
+            <div class="course-card">
+                <div class="course-content">
+                    <h3 class="course-title">الفصالة وتصميم الأزياء (دبلوم)</h3>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> <b>المدة:</b> سنتان (2)</span>
+                        <span><i class="fas fa-money-bill"></i> <b>السعر:</b> اتصلوا بنا</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem;">برنامج تدريبي شامل لإتقان تصميم وإنشاء الأزياء من الألف إلى الياء: رسم الموضة، إعداد الباترونات، الفصالة وتركيب الملابس. ستكون قادرًا في النهاية على ابتكار وتصميم مجموعاتك الخاصة.</p>
+                    <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">الآفاق المهنية:</h4>
+                    <ul style="list-style-type: disc; margin-right: 1.5rem; margin-bottom: 1.5rem; color: var(--color-grey-dark); font-size: 0.9rem;">
+                        <li>مؤهل في إعداد الباترونات وتصميم الأزياء (Modéliste)</li>
+                        <li>إنشاء علامة تجارية خاصة بتصميم الأزياء</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="width: 100%; text-align: center;">تسجيل الآن</a>
+                </div>
+            </div>
+
+            <!-- Formation 2 -->
+            <div class="course-card">
+                <div class="course-content">
+                    <h3 class="course-title">الفصالة والخياطة العصرية (دبلوم)</h3>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> <b>المدة:</b> سنتان (2)</span>
+                        <span><i class="fas fa-money-bill"></i> <b>السعر:</b> اتصلوا بنا</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem;">تكوين شامل في الفصالة والخياطة العصرية والملابس الجاهزة. تعلم كيفية تحويل الكروكي (الرسم) إلى قطعة ملابس جاهزة ومتناسقة تمامًا.</p>
+                    <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">المهارات المكتسبة:</h4>
+                    <ul style="list-style-type: disc; margin-right: 1.5rem; margin-bottom: 1.5rem; color: var(--color-grey-dark); font-size: 0.9rem;">
+                        <li>الباترون والتدرج: إنشاء باترونات مخصصة وصناعية</li>
+                        <li>تقنيات الفصالة: تحسين الدقة والاستغلال الأمثل للأقمشة</li>
+                        <li>التركيب واللمسات الأخيرة: فن التجميع والتشطيب المثالي</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="width: 100%; text-align: center;">تسجيل الآن</a>
+                </div>
+            </div>
+
+            <!-- Formation 3 -->
+            <div class="course-card">
+                <div class="course-content">
+                    <h3 class="course-title">الفصالة والخياطة التقليدية (شهادة)</h3>
+                    <div class="course-meta">
+                        <span><i class="far fa-clock"></i> <b>المدة:</b> سنة واحدة (1)</span>
+                        <span><i class="fas fa-money-bill"></i> <b>السعر:</b> اتصلوا بنا</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem;">تكوين تطبيقي 100% في الفصالة والخياطة التقليدية المغربية. تعلمي فنون تفصيل وخياطة القفطان، التكشيطة، الجلابة المغربية، الجابادور، من الأساسيات إلى التشطيبات الراقية (السفيفة، العقاد، الطرز).</p>
+                    <h4 style="margin-bottom: 0.5rem; font-size: 1rem;">الآفاق المهنية:</h4>
+                    <ul style="list-style-type: disc; margin-right: 1.5rem; margin-bottom: 1.5rem; color: var(--color-grey-dark); font-size: 0.9rem;">
+                        <li>حرفي فني متخصص في اللباس التقليدي</li>
+                        <li>مسؤول ورشة خياطة تقليدية</li>
+                        <li>إنشاء علامة تجارية خاصة باللباس التقليدي (Beldi)</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="width: 100%; text-align: center;">تسجيل الآن</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 إسكومود. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

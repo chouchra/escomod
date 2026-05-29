@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Inscription - Escomod</title>
+    <meta name="description"
+        content="Contactez Escomod El Jadida pour vous inscrire à nos formations en couture et modélisme.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background-color: var(--color-text);
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--color-white);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section {
+            padding: 5rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info {
+            background-color: var(--color-white);
+            padding: 3rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-item i {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+        }
+
+        .info-item h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            color: var(--color-grey-dark);
+        }
+
+        /* Form */
+        .contact-form {
+            background-color: var(--color-white);
+            padding: 3rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow-lg);
+            border-top: 4px solid var(--color-primary);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            background-color: #eee;
+            margin-bottom: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" style="background-color: var(--color-white);">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/escomod_logo.png" alt="Escomod Logo" class="logo-img"></a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="formations.html">Nos formations</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="temoignages.html">Témoignages</a>
+                <a href="a-propos.html">À propos</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="ar/contact.html" class="lang-switch">العربية</a>
+            </div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Contact & Inscription</h1>
+            <p>Nous sommes à votre disposition pour toute information.</p>
+        </div>
+    </header>
+
+    <div class="container contact-section">
+        <!-- Informations de contact -->
+        <div class="contact-info">
+            <h2 style="margin-bottom: 2rem;">Nos Coordonnées</h2>
+
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Adresse</h4>
+                    <p>2ème étage N°8, Kissariat Paris, Place ELHansali, El Jadida
+                        24000, Maroc</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h4>Téléphone / WhatsApp</h4>
+                    <p><a href="https://wa.me/212600000000">+212 6 00 00 00 00</a></p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:contact@escomod.ma">contact@escomod.ma</a></p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h4>Horaires d'ouverture</h4>
+                    <p> Lun - Ven: 09:30 - 11:30 | 15:00 - 17:00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="contact-form">
+            <h2 style="margin-bottom: 2rem;">Demande d'inscription</h2>
+            <!-- Formulaire via Formspree -->
+            <form id="contact-form" action="https://formspree.io/f/mlgvzajv" method="POST">
+                <input type="hidden" name="_subject" value="Demande d'inscription" />
+                <div class="form-group">
+                    <label for="name">Nom complet *</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="_replyto" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone / WhatsApp *</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="formation">Formation souhaitée</label>
+                    <select id="formation" name="formation" class="form-control">
+                        <option value="modelisme">Modélisme (Diplôme)</option>
+                        <option value="coupe_couture">Coupe et couture (Diplôme)</option>
+                        <option value="coupe_couture_traditionnelle">Coupe et couture traditionnelles (Attestation)
+                        </option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre message</label>
+                    <textarea id="message" name="message" rows="4" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer la demande</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Google Maps -->
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.49310184638!2d-8.502914!3d33.2535808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda91d12a5b46f37%3A0xebe96d82ffaba8bd!2sEscomod%20-%20Ecole%20sp%C3%A9ciale%20de%20couture%20et%20de%20mod%C3%A9lisme!5e0!3m2!1sfr!2sma!4v1780013951163!5m2!1sfr!2sma"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Escomod. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Témoignages - Escomod</title>
+    <meta name="description" content="Découvrez les parcours inspirants de nos anciens élèves diplômés d'Escomod.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background-color: var(--color-text);
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--color-white);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            padding: 5rem 0;
+        }
+
+        .testimonial-card {
+            background: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .testimonial-card i.fa-quote-left {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            color: var(--color-grey);
+            opacity: 0.5;
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            color: var(--color-grey-dark);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .student-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .student-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .student-details h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .student-details p {
+            font-size: 0.85rem;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" style="background-color: var(--color-white);">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/escomod_logo.png" alt="Escomod Logo"
+                    class="logo-img"></a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="formations.html">Nos formations</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="temoignages.html" class="active">Témoignages</a>
+                <a href="a-propos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="ar/temoignages.html" class="lang-switch">العربية</a>
+            </div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Ils nous font confiance</h1>
+            <p>Parcours et réussites de nos anciens élèves.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="testimonials-grid">
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-content">"Escomod m'a donné toutes les clés pour lancer ma propre marque de
+                    prêt-à-porter. La qualité de l'enseignement en modélisme est exceptionnelle et m'a permis de
+                    transformer mes dessins en véritables vêtements."</p>
+                <div class="student-info">
+                    <div class="student-details">
+                        <h4>Salma B.</h4>
+                        <p>Promotion 2019- Créatrice de marque</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-content">"Grâce à la formation en Haute Couture Marocaine, j'ai perfectionné mes
+                    techniques de broderie et de coupe. J'ai immédiatement trouvé un poste de styliste dans une grande
+                    maison de couture à Casablanca."</p>
+                <div class="student-info">
+                    <div class="student-details">
+                        <h4>Safaa K.</h4>
+                        <p>Promotion 2017 - Modéliste Haute Couture</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-content">"Les professeurs sont passionnés et très patients. L'ambiance à l'école
+                    est très inspirante. Je recommande Escomod à toutes les femmes qui souhaitent faire de la mode leur
+                    métier."</p>
+                <div class="student-info">
+                    <div class="student-details">
+                        <h4>Mme Rachida K.</h4>
+                        <p>Promotion 2013- Mère et modéliste</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Escomod. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

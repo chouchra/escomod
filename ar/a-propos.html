@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - إسكومود</title>
+    <meta name="description" content="اكتشف تاريخ مدرسة إسكومود بالجديدة وطاقمنا التعليمي المتميز.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .logo { font-family: 'Amiri', serif; }
+
+        .page-header {
+            padding: 120px 0 60px;
+            background-color: var(--color-text);
+            color: var(--color-white);
+            text-align: center;
+        }
+        .page-header h1 {
+            color: var(--color-white);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .about-section {
+            padding: 5rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-image {
+            background-color: #eee;
+            height: 500px;
+            border-radius: 4px;
+            background-image: url('../images/about-img.jpg');
+            background-size: cover;
+            background-position: center;
+            box-shadow: var(--shadow-lg);
+        }
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--color-grey-dark);
+            font-size: 1.1rem;
+        }
+        .team-section {
+            background-color: var(--color-white);
+            padding: 5rem 0;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .team-card {
+            text-align: center;
+        }
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin: 0 auto 1.5rem;
+            object-fit: cover;
+        }
+        .team-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        .team-card p {
+            color: var(--color-grey-dark);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" style="background-color: var(--color-white);">
+        <div class="container">
+            <a href="index.html" class="logo">إسكومود</a>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="formations.html">تكويناتنا</a>
+                <a href="galerie.html">المعرض</a>
+                <a href="temoignages.html">آراء الطلاب</a>
+                <a href="a-propos.html" class="active">من نحن</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="../a-propos.html" class="lang-switch">Français</a>
+            </div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>من نحن</h1>
+            <p>اكتشف قصتنا وقيمنا البيداغوجية.</p>
+        </div>
+    </header>
+
+    <div class="container about-section">
+        <div class="about-image"></div>
+        <div class="about-content">
+            <h2>التميز لأكثر من 15 سنة</h2>
+            <p>تأسست مدرسة <strong>إسكومود</strong> في مدينة الجديدة، وفرضت نفسها كمؤسسة مرجعية لتعليم الفصالة والخياطة وتصميم الأزياء في المنطقة.</p>
+            <p>مهمتنا هي نقل خبرة متميزة تجمع بين التقنيات التقليدية للخياطة الرفيعة المغربية (البوريس، العقاد، السفيفة) واتجاهات الموضة العصرية والملابس الجاهزة العالمية.</p>
+            <p>نحن نحرص على تقديم تأطير وتوجيه شخصي لطلابنا، وتوفير معدات مهنية متطورة، وجسر مباشر نحو العالم المهني بفضل شبكتنا الواسعة من الشركاء لمساعدتكم على فتح مشاريعكم الخاصة.</p>
+            <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">انضم إلينا الآن</a>
+        </div>
+    </div>
+
+    <!-- Équipe Pédagogique -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">طاقمنا التعليمي</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="../images/team1.jpg" alt="مؤطرة" class="team-img" onerror="this.src='https://via.placeholder.com/150'">
+                    <h3>السيدة فاطمة ز.</h3>
+                    <p>مؤطرة في الخياطة الرفيعة والتقليدية المغربية<br>20 سنة من الخبرة</p>
+                </div>
+                <div class="team-card">
+                    <img src="../images/team2.jpg" alt="أستاذ" class="team-img" onerror="this.src='https://via.placeholder.com/150'">
+                    <h3>السيد يوسف ب.</h3>
+                    <p>أستاذ الفصالة الصناعية وإعداد الباترونات<br>مصمم سابق لدى علامات تجارية كبرى</p>
+                </div>
+                <div class="team-card">
+                    <img src="../images/team3.jpg" alt="أستاذة" class="team-img" onerror="this.src='https://via.placeholder.com/150'">
+                    <h3>السيدة سارة م.</h3>
+                    <p>أستاذة تصميم الأزياء والستايل<br>مصممة أزياء ومبتكرة مجموعات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 إسكومود. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آراء الطلاب - إسكومود</title>
+    <meta name="description" content="اكتشف قصص نجاح طلابنا وخريجينا المتميزين في مدرسة إسكومود بالجديدة.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .logo { font-family: 'Amiri', serif; }
+
+        .page-header {
+            padding: 120px 0 60px;
+            background-color: var(--color-text);
+            color: var(--color-white);
+            text-align: center;
+        }
+        .page-header h1 {
+            color: var(--color-white);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            padding: 5rem 0;
+        }
+        .testimonial-card {
+            background: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+        .testimonial-card i.fa-quote-left {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem; /* adjusted for RTL */
+            right: auto;
+            font-size: 3rem;
+            color: var(--color-grey);
+            opacity: 0.5;
+            transform: scaleX(-1); /* mirror quote icon for RTL */
+        }
+        .testimonial-content {
+            font-style: italic;
+            color: var(--color-grey-dark);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        .student-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .student-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+        .student-details h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.2rem;
+        }
+        .student-details p {
+            font-size: 0.85rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" style="background-color: var(--color-white);">
+        <div class="container">
+            <a href="index.html" class="logo">إسكومود</a>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="formations.html">تكويناتنا</a>
+                <a href="galerie.html">المعرض</a>
+                <a href="temoignages.html" class="active">آراء الطلاب</a>
+                <a href="a-propos.html">من نحن</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="../temoignages.html" class="lang-switch">Français</a>
+            </div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>آراء طلابنا</h1>
+            <p>اكتشفوا مسارات وشهادات نجاح خريجينا المتميزين.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="testimonials-grid">
+            
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-content">"لقد منحتني مدرسة إسكومود كل الأدوات والمفاتيح لإطلاق علامتي التجارية الخاصة بالملابس الجاهزة. جودة التكوين في الفصالة وإعداد الباترونات استثنائية وسمحت لي بتحويل تصاميمي الورقية إلى ملابس حقيقية."</p>
+                <div class="student-info">
+                    <img src="https://via.placeholder.com/60" alt="سلمى" class="student-img">
+                    <div class="student-details">
+                        <h4>سلمى ب.</h4>
+                        <p>خريجة دفعة 2022 - مؤسسة علامة تجارية للأزياء</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-content">"بفضل التكوين المتخصص في الخياطة الرفيعة والتقليدية المغربية، قمت بتطوير مهاراتي وتطوير دقتي في الفصالة والتطريز. وجدت على الفور وظيفة مصممة أزياء تقليدية في دار خياطة كبرى بالدار البيضاء."</p>
+                <div class="student-info">
+                    <img src="https://via.placeholder.com/60" alt="أمينة" class="student-img">
+                    <div class="student-details">
+                        <h4>أمينة ك.</h4>
+                        <p>خريجة دفعة 2021 - مصممة خياطة رفيعة (Beldi)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p class="testimonial-content">"المؤطرون شغوفون بعملهم وصبورون للغاية مع المبتدئين. الأجواء داخل المدرسة والورشات ممتعة وملهمة ومحفزة جداً. أنصح بالالتحاق بإسكومود لكل شخص يرغب في جعل الموضة والخياطة مهنته للمستقبل."</p>
+                <div class="student-info">
+                    <img src="https://via.placeholder.com/60" alt="ياسين" class="student-img">
+                    <div class="student-details">
+                        <h4>ياسين م.</h4>
+                        <p>خريج دفعة 2023 - مصمم باترونات مستقل (Freelance)</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 إسكومود. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

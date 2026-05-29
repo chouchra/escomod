@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie & Portfolio - Escomod</title>
+    <meta name="description" content="Découvrez les créations de nos élèves et nos défilés de mode.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background-color: var(--color-text);
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--color-white);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--color-grey-dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: var(--font-body);
+            transition: all var(--transition-fast);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding-bottom: 5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            aspect-ratio: 4/5;
+            background-color: #eee;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(128, 0, 32, 0.8);
+            /* Bordeaux transparent */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" style="background-color: var(--color-white);">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/escomod_logo.png" alt="Escomod Logo"
+                    class="logo-img"></a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="formations.html">Nos formations</a>
+                <a href="galerie.html" class="active">Galerie</a>
+                <a href="temoignages.html">Témoignages</a>
+                <a href="a-propos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="ar/galerie.html" class="lang-switch">العربية</a>
+            </div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Portfolio & Créations</h1>
+            <p>Le talent de nos élèves mis en lumière.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Filtres -->
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">Tout</button>
+            <button class="filter-btn" data-filter="haute_couture">Haute Couture</button>
+            <button class="filter-btn" data-filter="pret_a_porter">Prêt-à-porter</button>
+            <button class="filter-btn" data-filter="beldi">Beldi</button>
+
+        </div>
+
+        <!-- Grille -->
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Injecté dynamiquement par JS -->
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="gallery-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <video id="lightbox-video" controls autoplay muted playsinline></video>
+            <div id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Escomod. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Custom scripts -->
+    <script src="js/gallery.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryGrid = document.getElementById('gallery-grid');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            // Lightbox Elements
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxVideo = document.getElementById('lightbox-video');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const lightboxClose = document.querySelector('.lightbox-close');
+
+            // Load Gallery Items
+            const items = getGalleryItems();
+
+            function renderGallery(filter = 'all') {
+                galleryGrid.innerHTML = '';
+
+                const filteredItems = filter === 'all'
+                    ? items
+                    : items.filter(item => item.category === filter);
+
+                if (filteredItems.length === 0) {
+                    galleryGrid.innerHTML = '<p style="text-align: center; grid-column: 1/-1; padding: 3rem 0; color: var(--color-grey-dark);">Aucun média disponible dans cette catégorie.</p>';
+                    return;
+                }
+
+                filteredItems.forEach(item => {
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item';
+
+                    const isVideo = item.type === 'video';
+                    const iconClass = isVideo ? 'fas fa-play' : 'fas fa-search-plus';
+
+                    const mediaSrc = item.url;
+
+                    let imageTag = '';
+                    if (isVideo) {
+                        // Card look for video
+                        imageTag = `<div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #2c000a, #4a0014); color: white; aspect-ratio: 4/5;">
+                                        <i class="fas fa-play-circle" style="font-size: 4rem; color: var(--color-secondary); margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));"></i>
+                                        <span style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 500; color: #eee;">Vidéo</span>
+                                    </div>`;
+                    } else {
+                        imageTag = `<img src="${mediaSrc}" alt="${item.title_fr}" onerror="this.onerror=null;this.src='images/placeholder.png'">`;
+                    }
+
+                    galleryItem.innerHTML = `
+                        ${imageTag}
+                        <div class="gallery-overlay">
+                            <i class="${iconClass}"></i>
+                            <h3>${item.title_fr}</h3>
+                            <p>${item.desc_fr}</p>
+                        </div>
+                    `;
+
+                    galleryItem.addEventListener('click', () => {
+                        openLightbox(item);
+                    });
+
+                    galleryGrid.appendChild(galleryItem);
+                });
+            }
+
+            function openLightbox(item) {
+                lightboxImg.style.display = 'none';
+                lightboxVideo.style.display = 'none';
+                lightboxVideo.pause();
+                lightboxVideo.src = '';
+
+                lightboxCaption.textContent = item.title_fr + (item.desc_fr ? ` - ${item.desc_fr}` : '');
+
+                if (item.type === 'video') {
+                    lightboxVideo.src = item.url;
+                    lightboxVideo.style.display = 'block';
+                    lightboxVideo.load();
+                    lightboxVideo.play().catch(e => console.log("Auto-play prevented", e));
+                } else {
+                    lightboxImg.src = item.url;
+                    lightboxImg.style.display = 'block';
+                }
+
+                lightbox.classList.add('active');
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                lightboxVideo.pause();
+                lightboxVideo.src = '';
+            }
+
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            // ESC key to close lightbox
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+            });
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filterValue = btn.getAttribute('data-filter');
+                    renderGallery(filterValue);
+                });
+            });
+
+            // Init
+            renderGallery();
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

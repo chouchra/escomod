@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Escomod</title>
+    <meta name="description" content="Découvrez l'histoire et l'équipe de l'école Escomod à El Jadida.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background-color: var(--color-text);
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--color-white);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-section {
+            padding: 5rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            background-color: #eee;
+            height: 500px;
+            border-radius: 4px;
+            background-image: url('images/about-img.jpg');
+            background-size: cover;
+            background-position: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--color-grey-dark);
+            font-size: 1.1rem;
+        }
+
+        
+
+        @media (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" style="background-color: var(--color-white);">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/escomod_logo.png" alt="Escomod Logo" class="logo-img"></a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="formations.html">Nos formations</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="temoignages.html">Témoignages</a>
+                <a href="a-propos.html" class="active">À propos</a>
+                <a href="contact.html">Contact</a>
+                <a href="ar/a-propos.html" class="lang-switch">العربية</a>
+            </div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>À Propos d'Escomod</h1>
+            <p>Découvrez notre histoire et nos valeurs.</p>
+        </div>
+    </header>
+
+    <div class="container about-section">
+        <div class="about-image"></div>
+        <div class="about-content">
+            <h2>L'Excellence depuis plus de 32 ans</h2>
+            <p>Fondée à El Jadida, <strong>Escomod</strong> s'est imposée comme l'établissement de référence en matière
+                d'enseignement de la couture et du modélisme dans la région.</p>
+            <p>Notre mission est de transmettre un savoir-faire d'excellence, mêlant les techniques traditionnelles de
+                la haute couture marocaine et les tendances du stylisme moderne international.</p>
+            <p>Nous mettons un point d'honneur à offrir à nos étudiants un encadrement personnalisé, des équipements de
+                pointe, et un tremplin direct vers le monde professionnel.</p>
+            <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Rejoignez-nous</a>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Escomod. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
